@@ -152,17 +152,22 @@ Ideals can be viewed as partitions:
 
 TODO: add arrows and merge stuff to this picture
 
-@(hc-append
-          (text "R=")
-          (rectangle 10 100)
-          (rectangle 10 100)
-          (rectangle 10 100)
-          (rectangle 10 100)
-          (rectangle 10 100)
-          (rectangle 10 100)
-          (rectangle 10 100)
-          (rectangle 10 100)
-          (rectangle 10 100))
+@(let* ((first (rectangle 10 100))
+          (first-lab (text "Ideal"))
+          (combined (vl-append
+                     (hc-append
+                      (text "R=")
+                      first
+                      (rectangle 10 100)
+                      (rectangle 10 100)
+                      (rectangle 10 100)
+                      (rectangle 10 100)
+                      (rectangle 10 100)
+                      (rectangle 10 100)
+                      (rectangle 10 100)
+                      (rectangle 10 100))
+                     first-lab)))
+          (pin-line combined first cc-find first-lab cc-find))
 
 Each ideal gets merged into a single element. The first @${I \rightarrow 0}, then @${a + I \rightarrow a}, @${b + I \rightarrow b}, ...
 
