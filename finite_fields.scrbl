@@ -369,4 +369,307 @@ Since each @${b_i} has @${p} choices, the size of the set is @${\underbrace{p * 
 
 @${F^{\times} = F - \{0\}} is a multiplicative group (since @${0} doesn't have a multiplicative inverse)
 
-Order is @${p^n - 1 \rightarrow \forall \in F^{\times}, a^{p^n - 1} = 1 \Rightarrow a^p^n = a \rightarrow a^p^n - a = 0}
+Order is @${p^{n} - 1 \rightarrow \forall \in F^{\times}, a^{p^{n} - 1} = 1 \Rightarrow a^{p^{n}} = a \rightarrow a^{p^{n}} - a = 0}
+
+Finite @${(G, *), \forall g \in G, \underbrace{g * g * \ldots * g}_{|G|} = e} (Lagrange's theorem)
+
+@${\forall a \in F, a} is a root of @${x^{p^{n}} - x = 0}
+
+Algebraic over @${\mathbb{Z}_p} means it is a root of a polynomial in @${\mathbb{Z}_p [X]}
+
+@${k = \{0, 1, 1+1, 1+1+1, \ldots , \underbrace{1 + 1 + \ldots + 1}_{p - 1}\}}
+
+@${F} is a finite field with characteristic @${p}.
+
+@${K}, a prime subfield @${\cong} @${\mathbb{Z}_p}
+
+@${\alpha} has a minimal polynomial @${f(x) = x^{r} + a_{r - 1} x^{r - 1} + \ldots + a_{1}x + a_0, a_i \in K, a_0 \neq 0}
+
+@${f(x)^p = f(x^p)}
+
+@proof{
+          Notice that @${(x + y)^p = x^p + \binom{p}{1} x^{p - 1} y + \binom{p}{2} x ^ {p - 2} y^2 + \ldots + \binom{p}{p - 1} xy^{p - 1} + y^p}
+
+          @${= x^p + y ^ p \in \mathbb{Z}_p} since all @${\binom{p}{i} \forall i \in \{1, \ldots, p - 1\}} are divisible by @${p} (a prime)
+
+          @${f(x)^p = (x^r)^p + a^p_{r - 1}(x^{r - 1})^p + \ldots + a^p_1 + x^p + a^p_0}
+
+          Coefficients come from @${k}, so @${i \in k, i^p = i}
+
+          @${0 = f(\alpha)^p = f(\alpha^p)}
+
+          (The minimum polynomial of @${\alpha ^ p}) @${| f(x)} where @${f(x)} is irreducible.
+
+          The minimum polynomial of @${\alpha ^ p = f(x)}
+}
+
+Galois field @${F=GF(p^n)}
+
+@${\mathbb{Z}_p^\times} e.g. @${\{1, 2, \ldots, 10\} = \mathbb{Z}_{11}^\times}
+
+2 is a primitive, so it can be used to generate every element in the set with @${2^i} (@${i = \{1, 2, \ldots, 10\}})
+
+@${\phi(n)} is the number of numbers less than @${n} that are relatively prime to @${n}
+
+@${\phi(20) = 8}
+
+@${\phi(p) = p - 1}
+
+@${\phi(p^2) = p^2 - p}
+
+@${\phi(p^3) = p^3 - p^2}
+
+@${\phi(p^n) = p^n - p^{n - 1}}
+
+@${\phi(p^n q^m) = (p^n - p^{n - 1})(q^m - q^{m - 1})}
+
+@${\phi(p^\alpha p_2^{\alpha_2} \ldots p_r^{\alpha_r}) = (p^{\alpha_1}_1 - p^{\alpha_1 - 1}_1)(p^{\alpha_2}_2 - p^{\alpha_2 - 2}_2) \ldots (p^{\alpha_r}_r - p^{\alpha_r - 1}_r)}
+
+@${\phi(a b) = \phi(a) \phi(b)} if @${\gcd(a, b) = 1}
+
+@${\phi(2^2 * 5) = (2^2 - 2)(5 - 1) = 8}
+
+Number of primitive elements is @${\phi(p^n - 1)}
+
+Finitely generated abelian group theorem: @${G} is an abelian group. Then @${G \cong \mathbb{Z}^n \times \mathbb{Z}^{\alpha_1}_{k_1} \times \mathbb{Z}^{\alpha_2}_{k_2} \times \ldots \times \mathbb{Z}^{\alpha_m}_{k_m}} with addition as the operation.
+
+@example{
+          @${M_{2\times3} = \{\begin{bmatrix}
+          a & b & c \\
+          d & e & f
+          \end{bmatrix} : a, b, c, d, e, f \in \mathbb{Z} \cong \mathbb{Z}^6\}}
+
+          Polynomials up to degree 2 in @${\mathbb{Z} [X, Y] \cong \mathbb{Z}^6}
+          @${= 1, X, X^2, Y, Y^2, XY}
+
+          @${a_1 + a_2 X + a_3 X^2 + a_4 Y + a_5 Y^2 + a_6 XY \rightarrow (a_1, a_2, a_3, a_4, a_5, a_6)}
+}
+
+A finite abelian group
+
+@${G \cong \mathbb{Z}^{\alpha_1}_{k_1} \times \mathbb{Z}^{\alpha_2}_{k_2} \times \ldots \times \mathbb{Z}^{\alpha_m}_{k_m}}
+
+@${\mathbb{Z}_2 \times \mathbb{Z}_3 = \{(a, b) : a \in \mathbb{Z}_2, b \in \mathbb{Z}_3\}}
+
+@${=\{(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2)\} \cong \mathbb{Z}_6}
+
+@${\mathbb{Z}_2 \times \mathbb{Z}_4 = \{(0, 0), (0, 1), (0, 2), (0, 3), (1, 0), (1, 1), (1, 2), (1, 3)\} \cong \mathbb{Z}_8}
+
+
+@example{
+          @smaller{@${\mathbb{Z}_2 \times \mathbb{Z}_3}}
+          Starting with @${(0, 0)}, add @${(1, 1)}
+
+          @${(0, 0) (1, 1) (0, 2) (1, 0) (0, 1) (1, 2)}
+
+          @smaller{@${\mathbb{Z}_2 \times \mathbb{Z}_4}}
+          @${(0, 0) (1, 1) (0, 2) (1, 3)}
+}
+
+@${\mathbb{Z}_a \times \mathbb{Z}_b \cong \mathbb{Z}_{a * b} \iff \gcd(a, b) = 1}
+
+@${\mathbb{Z}_6 \times \mathbb{Z}_{72} \cong \mathbb{Z}_{18} \times \mathbb{Z}_{24}}
+
+Since @${mathbb{Z}_6 \cong \mathbb{Z}_2 \times \mathbb{Z}_3} and @${mathbb{Z}_{72} \cong \mathbb{Z}_8 \times \mathbb{Z}_9}
+
+So by recombining @${\mathbb{Z}_6 \times \mathbb{Z}_{72} \cong \mathbb{Z}_{18} \times \mathbb{Z}_{24}}
+
+Theorem: a polynomial @${p(x) \in F[X]} has at most @${\deg p(x)} roots in @${F}.
+
+@${\alpha is a root of @${p(x) \iff (x - \alpha) | p(x)}}
+
+Lemma @${Z_t}, let @${d | t}. The number of elements with order dividing @${d} is exactly @${d}.
+
+Theorem 4.3 @${F^\times} is cyclic.
+@proof{
+          @${F^\times} is a finite abelian multiplicative group
+
+          @${F^\times \cong \mathbb{Z}_{k_1} \times \mathbb{Z}_{k_2} \times \ldots \times \mathbb{Z}_{k_m}}, where
+          @${k_1 | k_2 | k_3 | \ldots | k_m}
+
+          Number of elements dividing @${k_1 = \underbrace{k_1 + k_1 + \ldots + k_1}_{m} = m * k_1}
+
+          @${x^{k_1} - 1 = 0}
+
+          Number of roots is @${k_1 + k_1 + \ldots + k_1 = m k_1 > \deg \iff m > 1}
+
+          Contradiction, so @${m = 1} so there can only be @${\mathbb{Z}_k}.
+}
+
+@${L} is a vector space over @${k} with basis @${\{l_1, l_2, \ldots, l_n\} \subseteq L}
+
+@${\forall l \in L, l = k_1 l_1 + k_2 l_2 + \ldots + k_n l_n}
+
+@${K} is a vector space over @${F} with basis @${\{b_1, b_2, \ldots, b_m\} \subseteq K}
+
+@${\forall k \in K, k = f_1 b_1 + f_2 b_2 + \ldots + f_m b_m}
+
+So @${\{b_1 l_n, b_2 l_n, \ldots, b_m l_n\} \subseteq L} is a basis of @${L} over @${F} where @${\deg = m * n}.
+
+---
+
+Finite field of size @${p^n}. All elements of @${GF(p^n)} are all the roots of @${\underbrace{x^{p^n} - x}_{\text{polynomial over} \mathbb{Z}_p} = 0}
+
+@${GF(8)} (@${8 = 2^3}) @${\alpha} is a root of @${x^3 + x + 1 = 0}
+
+@${GF(8) = \{0, 1, \alpha, \alpha + 1, \alpha^2, \alpha^2 + 1, \alpha^2 + \alpha, \alpha^2 + \alpha + 1\}}
+
+@${\alpha^7 = 1}
+
+@${\alpha^1 = \alpha}
+
+@${\alpha^3 = \alpha + 1}
+
+@${\alpha^2 = \alpha^2}
+
+@${\alpha^6 = \alpha^2 + 1}
+
+@${\alpha^4 = \alpha^2 + \alpha}
+
+@${\alpha^5 = \alpha^2 + \alpha + 1}
+
+@${\alpha^i} are all roots of @${\underbrace{x^{p^n} - x}_{\text{over} \mathbb{Z}_2} = 0}
+
+And are roots of @${x^8 - x = 0 \Rightarrow x(x^7 - 1) = 0} so @${x^3 + x + 1 | x^7 + 1}
+
+@${x(x^{p^n - 1} - 1) = 0} (by Langrange's theorem any element raised to @${p^n - 1} = 1)
+
+@${GF(p^n) - \{0\}} is a multiplicative group with size @${p^n - 1}
+
+@${\mathbb{B}} is a root of @${x^3 + x^2 + 1 = 0}.
+
+@${GF(8) = \{0, 1, \beta, \beta + 1, \beta^2, \beta^2 + 1, \beta^2 + \beta, \beta ^ 2 + \beta + 1\}}
+
+@${\beta^7 = 1}
+
+@${\beta^1 = \beta}
+
+@${\beta^5 = \beta + 1}
+
+@${\beta^2 = \beta^2}
+
+@${\beta^3 = \beta^2 + 1}
+
+@${\beta^6 = \beta^2 + \beta}
+
+@${\beta^4 = \beta^2 + \beta + 1}
+
+@${\alpha \rightarrow \beta} is not an isomorphism of @${GF(8) \rightarrow GF(8)}
+
+@${x^6 + x^5 + 1} is irreducible over @${\mathbb{B}}
+
+@${\alpha} is a root of @${x^6 + x^5 + 1} (which is the minimal polynomial of @${\alpha})
+
+@${GF(2^6) = span (1, \alpha, \alpha^2, \alpha^3, \alpha^4, \alpha^5)}.
+
+Is @${\alpha} primitive? @${GF(2^6)^\times} is of size 63
+To verify whether @${\alpha} is a primitive we need to ensure @${\alpha^1, \alpha^2, \ldots, \alpha^21} are not 1. (Only need to check the proper divisors of 63)
+
+if @${a^3 = 1}, @${\alpha^3 - 1 = 0}.
+
+Minimal polynomial of @${\alpha} (i.e. the lowest degree polynomial that has @${\alpha} as its root) divides any polynomial @${p(x)} s.t @${p(\alpha) = 0}
+
+@${f(x) | x^{p^n - 1} - 1}
+and @${f(x) \nmid x^k - 1 \forall k < p^n - 1}
+
+@${f(x)} is primitive over @${GF(p)} if its root @${\alpha} generates @${GF(p^n)^x}
+
+@${\alpha ^ k \neq 1 \forall k < p^n - 1}
+
+@${f(x) | x^k - 1} for some @${k < p^n - 1} @${\iff} every root of @${f(x)} satisfies @${x^k - 1 = 0 \iff \alpha ^ k - 1 = 0}, where @${\alpha} is a root of @${f(x)}
+
+@example{
+          @${\mathbb{R}}
+
+          |
+
+          @${\mathbb{Q}(\sqrt{2})} <- @${a \sqrt{2} + b, a, b \in \mathbb{Q}}
+
+          |
+
+          @${\mathbb{Q}}
+
+          @${\{a \sqrt{2} + b : a, b \in \mathbb{Q} = \mathbb{Q}[\sqrt{2}]\}}
+
+          Note we only need one degree since it loops back around at @${\sqrt{2}^i, i > 1}
+}
+
+In general @${F[\alpha] \supseteq F(\alpha)}
+
+@example{
+          @${\mathbb{Q}[x] = \{a_nx^n + a_{n - 1}x^{n - 1} + \ldots + a_0 : a_i \in \mathbb{Q}\}}
+
+          @${\mathbb{Q}(x) = \{\frac{a_nx^n + a_{n - 1}x^{n - 1} + \ldots + a_0}{b_mx^m + b_{m - 1}x^{m - 1} + \ldots + b_0} : a_i, b_i \in \mathbb{Q}, \text{not all } b_i = 0\}}
+
+          So @${\mathbb{Q}(x)} has multiplicative inverses.
+
+          @${\mathbb{Q}[\sqrt{2}] = \mathbb{Q}(\sqrt{2})} since @${\frac{1}{a \sqrt{2} + b} * \frac{a\sqrt{2} - b}{a\sqrt{2} - b} = \frac{a \sqrt{2} - b}{2a^2 - b^2} = \frac{a \sqrt{2}}{2a^2 - b^2} - \frac{b}{2a^2 - b^2} \in \mathbb{Q}(\sqrt{2})}
+
+          @${F(\alpha)} is the smallest subfield containing @${F} and @${\alpha}
+
+          @${\mathbb{Q}(x)(y) = \mathbb{Q}(x, y)}
+}
+
+@${f(x)} is a polynomial in @${F[x]}
+
+@bold{Definition of splitting field}
+@${K} is a splitting field of @${F[x]} if @${K} is the "smallest" field containing all the roots of @${f(x)}. In other words, @${f(x) = (x - \alpha_1)(x - \alpha_2)\ldots(x - \alpha_n),\, \alpha_1, \alpha_2, \ldots, \alpha_n \in K,\, K = F(\alpha_1, \alpha_2, \ldots, \alpha_n)}
+
+@example{
+          @${x^2 - 2} is irreducible over @${\mathbb{Q}}, @${\mathbb{Q}(2)} is the splitting field of @${x^2 - 2}
+
+          @${F[x]}, @${f(x)} is an irreducible polynomial. @${@generator{f(x)}} is an ideal.
+}
+
+Claim: @${x + @generator{f(x)} = a_n(x + @generator{f(x)}^n + \ldots + a_1 (x + @generator{f(x)}) + a_0)}
+
+@proof{
+          @${= a_n (x^n + @generator{f(x)}) + \ldots a_1 (x + @generator{f(x)}) + a_0}
+
+          Using ideal addition operation:
+
+          @${= a_n x^n + \ldots + a_1 x + a_0 + @generator{f(x)} = f(x) + @generator{f(x)} = @generator{f(x)}}
+
+          @${\therefore x + @generator{f(x)} = @generator{f(x)}} which is the identity
+
+          @${\therefore x + @generator{f(x)} is a root of @${f(x)}}
+}
+
+Eisenstein's irreducible criterion: If a polynomial @${x^n + a_{n - 1} x^{n - 1} + \ldots + a_1 x + a_0} satisfies:
+@itemlist[@item{@${\exists \text{prime} p \mid a_{n - 1}, a_{n - 2}, \ldots, a_1, a_0}}
+          @item{@${p^2 \nmid  a_0}}]
+Then the polynomial is irreducible.
+
+@${\mathbb{Q}(\sqrt[4]{2} \cong \mathbb{Q}(\sqrt[4]{2}i))}
+
+@$${x^4 - 2}
+@$${= (x^2 + \sqrt{2})(x^2 - \sqrt{2})}
+@$${= (x^2 + \sqrt{2})(x + \sqrt[4]{2})(x - \sqrt[4]{2}) \in \mathbb{Q}(\sqrt[4]{2})}
+
+@${\mathbb{Q}(\sqrt[4]{2}, i)}. Note that @${1, i} is in the basis.
+
+| degree 2
+
+@${\mathbb{Q}(\sqrt[4]{2}, i)}. @${1, (\sqrt[4]{2})^2, (\sqrt[4]{2})^3} in the basis.
+
+| degree 4
+
+@${\mathbb{Q}(\sqrt[4]{2}, i)}. @${1, (\sqrt[4]{2})^2, (\sqrt[4]{2})^3} in the basis.
+
+|
+
+@${\mathbb{Q}}
+
+Let @${f(x)} be irreducible over @${F}.
+
+Let @${K} be the splitting field of @${f(x)}. Then
+
+@${K}
+
+| @${\deg | n!}
+
+@${F}
+
+@${f(x)} has @${\alpha_1, \alpha_2, \ldots, \alpha_n} as roots.
+
+@${[F(\alpha_1, \ldots, \alpha_n) : ... : F(\alpha_1, \alpha_2) : F(\alpha_1) : F]}
